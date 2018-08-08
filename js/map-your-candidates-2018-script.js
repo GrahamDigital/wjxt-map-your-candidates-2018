@@ -86,7 +86,7 @@ distInfo.onAdd = function (map) {
 }
 
 distInfo.update = function (props) {
-	this._div.innerHTML = "<h3>" + (props ? activeDistrict + " District: " + props.district_no + "<br /><br />" + props.contest : "Choose a type of office & click on your district") + "</h3>";
+	this._div.innerHTML = "<h3>" + (props ? activeDistrict + " District: " + props.district_no + "<br /><br />" + props.contest : "Choose a type of <br />office and click on <br />your district") + "</h3>";
 	//this._div.innerHTML = '<h3>District:</h3>' + (props[0]);
 };
 
