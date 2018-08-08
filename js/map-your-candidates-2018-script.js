@@ -1,6 +1,6 @@
 var layer = new L.StamenTileLayer('terrain');
 
-var map = new L.Map('map').setView([29.854,-81.652],8);
+var map = new L.Map('map').setView([29.954,-81.652],8);
 map.addLayer(layer);
 
 var geoJson;
