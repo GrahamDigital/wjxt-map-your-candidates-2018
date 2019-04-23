@@ -1,0 +1,12 @@
+ #map {
+ 	width: 100%;
+ 	height: 500px;
+ }
+ 
+ ul {
+	 list-style-type: none;
+ }
+ 
+ li {
+	 display: inline;
+ }
