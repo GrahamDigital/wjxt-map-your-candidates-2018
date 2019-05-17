@@ -18,17 +18,25 @@
 <body>
 <div class="explainer">Click a county in the map to see the statistics:</div>
 <div id="map"></div>
-<div class="explainer">Select a grade level:</div>
+<table width="100%">
+<tr>
+<td>
+Select a grade level:
 <ul>
 <li><label><input type="radio" name="GradeLevel" value="kindergarten" checked="checked">Kindergarten</label></li>
 <li><label><input type="radio" name="GradeLevel" value="seventh">7th Grade</label></li>
 </ul>
-<div class="explainer">Select a group of schools:</div>
+</td>
+<td>
+Select a group of schools:
 <ul>
 <li><label><input type="radio" name="Grouping" value="all" checked="checked">All Schools</label></li>
 <li><label><input type="radio" name="Grouping" value="public">Public Schools Only</label></li>
 <li><label><input type="radio" name="Grouping" value="private">Private Schools Only</label></li>
 </ul>
+</td>
+</tr>
+</table>
 <div class="d-md-none">Click the plus sign to see more details</div>
 <table id="immunization-counties" class="table table-striped table-bordered" width="100%">
 </table>
