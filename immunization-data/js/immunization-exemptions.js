@@ -56,7 +56,7 @@ $(document).ready( function () {
     $('#immunization-counties').DataTable( {
 	// data: dataset,
 	ajax: {
-		"url": "../json/immunization-rates-exemptions.json",
+		"url": "/json/immunization-rates-exemptions.json",
 		"dataSrc": "data"
 	},
     columns: [

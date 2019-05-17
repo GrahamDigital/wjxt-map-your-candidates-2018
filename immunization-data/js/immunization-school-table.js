@@ -1,7 +1,7 @@
 $(document).ready( function () {
 	$('#school-data').DataTable({
 		ajax: {
-			"url": "../json/immunization-school-data.json",
+			"url": "/json/immunization-school-data.json",
 			"dataSrc": "schoolData"
 		},
 		columns: [
