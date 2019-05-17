@@ -61,7 +61,7 @@ $(document).ready( function () {
 	},
     columns: [
         { title: "County" },
-        { title: "School Year" },
+        { title: "School Year"},
 		{ title: "Percent Fully Vaccinated" },
 		{ title: "Percent of Religious Exemptions" },
         { title: "Grade Level" },
@@ -69,6 +69,7 @@ $(document).ready( function () {
 		{ title: "Total Schools", render: $.fn.dataTable.render.number(",",".",0) },
         { title: "Total Students", render: $.fn.dataTable.render.number(",",".",0) }            
     ],
+	"order": [[1,"desc"]],
 	responsive: {
         details: {
            // display: $.fn.dataTable.Responsive.display.childRowImmediate, 
@@ -93,10 +94,7 @@ $(document).ready( function () {
 	lengthChange: false,
 	dom: 'lrtp',
 	"columnDefs": [
-		{
-			"targets": [4,5],
-			"visible": false
-		}
+		{"targets": [4,5], "visible": false}
 	]
 	
 	});
