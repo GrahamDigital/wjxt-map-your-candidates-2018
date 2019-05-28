@@ -1,0 +1,1296 @@
+<html>
+<head>
+	<title>FSA Results: 3rd Grade ELA</title>
+	<!-- Mobile meta tags, taken from Chris Essig tutorial @csessig86 -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="MobileOptimized" content="320"/>
+	<meta http-equiv="cleartype" content="on">
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.18/fh-3.1.4/r-2.2.2/datatables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/fl-counties-map.css" />	
+</head>
+<body>
+<div class="d-xs-none"><em>Rotate your mobile device horizontally for the best view</em></div>
+<div class="explainer">Click a county in the map to see the statistics:</div>
+<div id="map"></div>
+2019 Results:
+<div class="d-sm-none">Click the plus sign to see more details</div>
+<table id="ela-districts" class="table table-striped table-bordered table-sm table-responsive ddtable">
+	<thead>
+		<tr>
+			<th>County</th>
+			<th>Number of Students</th>
+			<th>Percent in Level 3 or Above</th>
+			<th>Percent in Level 1</th>
+			<th>Percent in Level 2</th>
+			<th>Percent in Level 3</th>
+			<th>Percent in Level 4</th>
+			<th>Percent in Level 5</th>
+		</tr>
+	</thead>
+  <tbody>
+    <tr class="firstRow">
+      <td class="DistrictName2019-cell">State Totals</td>
+      <td class="NumStudents-cell">216,823</td>
+      <td class="Pct3orAbove-cell">58%</td>
+      <td class="PctLevel1-cell">20%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">22%</td>
+      <td class="PctLevel5-cell">8%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Alachua</td>
+      <td class="NumStudents-cell">2,333</td>
+      <td class="Pct3orAbove-cell">57%</td>
+      <td class="PctLevel1-cell">21%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">26%</td>
+      <td class="PctLevel4-cell">20%</td>
+      <td class="PctLevel5-cell">10%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Baker</td>
+      <td class="NumStudents-cell">333</td>
+      <td class="Pct3orAbove-cell">73%</td>
+      <td class="PctLevel1-cell">6%</td>
+      <td class="PctLevel2-cell">20%</td>
+      <td class="PctLevel3-cell">34%</td>
+      <td class="PctLevel4-cell">30%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Bay</td>
+      <td class="NumStudents-cell">1,839</td>
+      <td class="Pct3orAbove-cell">61%</td>
+      <td class="PctLevel1-cell">16%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">31%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Bradford</td>
+      <td class="NumStudents-cell">217</td>
+      <td class="Pct3orAbove-cell">59%</td>
+      <td class="PctLevel1-cell">9%</td>
+      <td class="PctLevel2-cell">32%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Brevard</td>
+      <td class="NumStudents-cell">5,290</td>
+      <td class="Pct3orAbove-cell">64%</td>
+      <td class="PctLevel1-cell">15%</td>
+      <td class="PctLevel2-cell">21%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">26%</td>
+      <td class="PctLevel5-cell">8%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Broward</td>
+      <td class="NumStudents-cell">20,175</td>
+      <td class="Pct3orAbove-cell">60%</td>
+      <td class="PctLevel1-cell">18%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">29%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">8%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Calhoun</td>
+      <td class="NumStudents-cell">138</td>
+      <td class="Pct3orAbove-cell">62%</td>
+      <td class="PctLevel1-cell">14%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">22%</td>
+      <td class="PctLevel5-cell">12%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Charlotte</td>
+      <td class="NumStudents-cell">1,006</td>
+      <td class="Pct3orAbove-cell">69%</td>
+      <td class="PctLevel1-cell">10%</td>
+      <td class="PctLevel2-cell">20%</td>
+      <td class="PctLevel3-cell">32%</td>
+      <td class="PctLevel4-cell">29%</td>
+      <td class="PctLevel5-cell">8%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Citrus</td>
+      <td class="NumStudents-cell">1,121</td>
+      <td class="Pct3orAbove-cell">61%</td>
+      <td class="PctLevel1-cell">14%</td>
+      <td class="PctLevel2-cell">25%</td>
+      <td class="PctLevel3-cell">31%</td>
+      <td class="PctLevel4-cell">22%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Clay</td>
+      <td class="NumStudents-cell">2,684</td>
+      <td class="Pct3orAbove-cell">68%</td>
+      <td class="PctLevel1-cell">11%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">33%</td>
+      <td class="PctLevel4-cell">27%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Collier</td>
+      <td class="NumStudents-cell">3,487</td>
+      <td class="Pct3orAbove-cell">61%</td>
+      <td class="PctLevel1-cell">17%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Columbia</td>
+      <td class="NumStudents-cell">845</td>
+      <td class="Pct3orAbove-cell">68%</td>
+      <td class="PctLevel1-cell">10%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">34%</td>
+      <td class="PctLevel4-cell">26%</td>
+      <td class="PctLevel5-cell">8%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Miami-Dade</td>
+      <td class="NumStudents-cell">26,170</td>
+      <td class="Pct3orAbove-cell">60%</td>
+      <td class="PctLevel1-cell">19%</td>
+      <td class="PctLevel2-cell">21%</td>
+      <td class="PctLevel3-cell">29%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Desoto</td>
+      <td class="NumStudents-cell">477</td>
+      <td class="Pct3orAbove-cell">34%</td>
+      <td class="PctLevel1-cell">35%</td>
+      <td class="PctLevel2-cell">31%</td>
+      <td class="PctLevel3-cell">22%</td>
+      <td class="PctLevel4-cell">11%</td>
+      <td class="PctLevel5-cell">1%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Dixie</td>
+      <td class="NumStudents-cell">169</td>
+      <td class="Pct3orAbove-cell">62%</td>
+      <td class="PctLevel1-cell">14%</td>
+      <td class="PctLevel2-cell">25%</td>
+      <td class="PctLevel3-cell">38%</td>
+      <td class="PctLevel4-cell">20%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Duval</td>
+      <td class="NumStudents-cell">10,579</td>
+      <td class="Pct3orAbove-cell">51%</td>
+      <td class="PctLevel1-cell">25%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">26%</td>
+      <td class="PctLevel4-cell">19%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Escambia</td>
+      <td class="NumStudents-cell">3,290</td>
+      <td class="Pct3orAbove-cell">56%</td>
+      <td class="PctLevel1-cell">19%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">20%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Flagler</td>
+      <td class="NumStudents-cell">895</td>
+      <td class="Pct3orAbove-cell">68%</td>
+      <td class="PctLevel1-cell">11%</td>
+      <td class="PctLevel2-cell">21%</td>
+      <td class="PctLevel3-cell">31%</td>
+      <td class="PctLevel4-cell">28%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Franklin</td>
+      <td class="NumStudents-cell">110</td>
+      <td class="Pct3orAbove-cell">50%</td>
+      <td class="PctLevel1-cell">33%</td>
+      <td class="PctLevel2-cell">17%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">18%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Gadsden</td>
+      <td class="NumStudents-cell">408</td>
+      <td class="Pct3orAbove-cell">37%</td>
+      <td class="PctLevel1-cell">26%</td>
+      <td class="PctLevel2-cell">36%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">9%</td>
+      <td class="PctLevel5-cell">1%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Gilchrist</td>
+      <td class="NumStudents-cell">187</td>
+      <td class="Pct3orAbove-cell">70%</td>
+      <td class="PctLevel1-cell">12%</td>
+      <td class="PctLevel2-cell">18%</td>
+      <td class="PctLevel3-cell">35%</td>
+      <td class="PctLevel4-cell">30%</td>
+      <td class="PctLevel5-cell">5%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Glades</td>
+      <td class="NumStudents-cell">151</td>
+      <td class="Pct3orAbove-cell">62%</td>
+      <td class="PctLevel1-cell">15%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">35%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Gulf</td>
+      <td class="NumStudents-cell">133</td>
+      <td class="Pct3orAbove-cell">53%</td>
+      <td class="PctLevel1-cell">22%</td>
+      <td class="PctLevel2-cell">25%</td>
+      <td class="PctLevel3-cell">32%</td>
+      <td class="PctLevel4-cell">18%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Hamilton</td>
+      <td class="NumStudents-cell">141</td>
+      <td class="Pct3orAbove-cell">50%</td>
+      <td class="PctLevel1-cell">33%</td>
+      <td class="PctLevel2-cell">18%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">16%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Hardee</td>
+      <td class="NumStudents-cell">415</td>
+      <td class="Pct3orAbove-cell">59%</td>
+      <td class="PctLevel1-cell">13%</td>
+      <td class="PctLevel2-cell">28%</td>
+      <td class="PctLevel3-cell">34%</td>
+      <td class="PctLevel4-cell">22%</td>
+      <td class="PctLevel5-cell">3%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Hendry</td>
+      <td class="NumStudents-cell">537</td>
+      <td class="Pct3orAbove-cell">47%</td>
+      <td class="PctLevel1-cell">25%</td>
+      <td class="PctLevel2-cell">28%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">15%</td>
+      <td class="PctLevel5-cell">5%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Hernando</td>
+      <td class="NumStudents-cell">1,772</td>
+      <td class="Pct3orAbove-cell">57%</td>
+      <td class="PctLevel1-cell">18%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">29%</td>
+      <td class="PctLevel4-cell">21%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Highlands</td>
+      <td class="NumStudents-cell">905</td>
+      <td class="Pct3orAbove-cell">50%</td>
+      <td class="PctLevel1-cell">22%</td>
+      <td class="PctLevel2-cell">28%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">17%</td>
+      <td class="PctLevel5-cell">5%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Hillsborough</td>
+      <td class="NumStudents-cell">17,761</td>
+      <td class="Pct3orAbove-cell">52%</td>
+      <td class="PctLevel1-cell">25%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">26%</td>
+      <td class="PctLevel4-cell">20%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Holmes</td>
+      <td class="NumStudents-cell">257</td>
+      <td class="Pct3orAbove-cell">59%</td>
+      <td class="PctLevel1-cell">15%</td>
+      <td class="PctLevel2-cell">26%</td>
+      <td class="PctLevel3-cell">33%</td>
+      <td class="PctLevel4-cell">21%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Indian River</td>
+      <td class="NumStudents-cell">1,382</td>
+      <td class="Pct3orAbove-cell">60%</td>
+      <td class="PctLevel1-cell">16%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Jackson</td>
+      <td class="NumStudents-cell">417</td>
+      <td class="Pct3orAbove-cell">58%</td>
+      <td class="PctLevel1-cell">15%</td>
+      <td class="PctLevel2-cell">27%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Jefferson</td>
+      <td class="NumStudents-cell">60</td>
+      <td class="Pct3orAbove-cell">45%</td>
+      <td class="PctLevel1-cell">25%</td>
+      <td class="PctLevel2-cell">30%</td>
+      <td class="PctLevel3-cell">37%</td>
+      <td class="PctLevel4-cell">7%</td>
+      <td class="PctLevel5-cell">2%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Lafayette</td>
+      <td class="NumStudents-cell">82</td>
+      <td class="Pct3orAbove-cell">62%</td>
+      <td class="PctLevel1-cell">16%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">33%</td>
+      <td class="PctLevel4-cell">22%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Lake</td>
+      <td class="NumStudents-cell">3,332</td>
+      <td class="Pct3orAbove-cell">60%</td>
+      <td class="PctLevel1-cell">18%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">31%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Lee</td>
+      <td class="NumStudents-cell">7,288</td>
+      <td class="Pct3orAbove-cell">58%</td>
+      <td class="PctLevel1-cell">19%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">29%</td>
+      <td class="PctLevel4-cell">21%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Leon</td>
+      <td class="NumStudents-cell">2,584</td>
+      <td class="Pct3orAbove-cell">61%</td>
+      <td class="PctLevel1-cell">19%</td>
+      <td class="PctLevel2-cell">20%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">24%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Levy</td>
+      <td class="NumStudents-cell">462</td>
+      <td class="Pct3orAbove-cell">52%</td>
+      <td class="PctLevel1-cell">24%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">17%</td>
+      <td class="PctLevel5-cell">5%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Liberty</td>
+      <td class="NumStudents-cell">104</td>
+      <td class="Pct3orAbove-cell">66%</td>
+      <td class="PctLevel1-cell">10%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">38%</td>
+      <td class="PctLevel4-cell">24%</td>
+      <td class="PctLevel5-cell">5%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Madison</td>
+      <td class="NumStudents-cell">204</td>
+      <td class="Pct3orAbove-cell">40%</td>
+      <td class="PctLevel1-cell">24%</td>
+      <td class="PctLevel2-cell">36%</td>
+      <td class="PctLevel3-cell">24%</td>
+      <td class="PctLevel4-cell">13%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Manatee</td>
+      <td class="NumStudents-cell">3,957</td>
+      <td class="Pct3orAbove-cell">51%</td>
+      <td class="PctLevel1-cell">24%</td>
+      <td class="PctLevel2-cell">25%</td>
+      <td class="PctLevel3-cell">24%</td>
+      <td class="PctLevel4-cell">20%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Marion</td>
+      <td class="NumStudents-cell">3,507</td>
+      <td class="Pct3orAbove-cell">44%</td>
+      <td class="PctLevel1-cell">32%</td>
+      <td class="PctLevel2-cell">25%</td>
+      <td class="PctLevel3-cell">24%</td>
+      <td class="PctLevel4-cell">15%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Martin</td>
+      <td class="NumStudents-cell">1,398</td>
+      <td class="Pct3orAbove-cell">54%</td>
+      <td class="PctLevel1-cell">22%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">19%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Monroe</td>
+      <td class="NumStudents-cell">615</td>
+      <td class="Pct3orAbove-cell">70%</td>
+      <td class="PctLevel1-cell">13%</td>
+      <td class="PctLevel2-cell">17%</td>
+      <td class="PctLevel3-cell">33%</td>
+      <td class="PctLevel4-cell">30%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Nassau</td>
+      <td class="NumStudents-cell">884</td>
+      <td class="Pct3orAbove-cell">75%</td>
+      <td class="PctLevel1-cell">7%</td>
+      <td class="PctLevel2-cell">18%</td>
+      <td class="PctLevel3-cell">34%</td>
+      <td class="PctLevel4-cell">32%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Okaloosa</td>
+      <td class="NumStudents-cell">2,463</td>
+      <td class="Pct3orAbove-cell">66%</td>
+      <td class="PctLevel1-cell">12%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">29%</td>
+      <td class="PctLevel4-cell">27%</td>
+      <td class="PctLevel5-cell">10%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Okeechobee</td>
+      <td class="NumStudents-cell">479</td>
+      <td class="Pct3orAbove-cell">59%</td>
+      <td class="PctLevel1-cell">17%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">33%</td>
+      <td class="PctLevel4-cell">21%</td>
+      <td class="PctLevel5-cell">5%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Orange</td>
+      <td class="NumStudents-cell">16,544</td>
+      <td class="Pct3orAbove-cell">55%</td>
+      <td class="PctLevel1-cell">23%</td>
+      <td class="PctLevel2-cell">21%</td>
+      <td class="PctLevel3-cell">26%</td>
+      <td class="PctLevel4-cell">21%</td>
+      <td class="PctLevel5-cell">8%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Osceola</td>
+      <td class="NumStudents-cell">4,875</td>
+      <td class="Pct3orAbove-cell">51%</td>
+      <td class="PctLevel1-cell">26%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">26%</td>
+      <td class="PctLevel4-cell">19%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Palm Beach</td>
+      <td class="NumStudents-cell">14,940</td>
+      <td class="Pct3orAbove-cell">54%</td>
+      <td class="PctLevel1-cell">22%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">27%</td>
+      <td class="PctLevel4-cell">20%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Pasco</td>
+      <td class="NumStudents-cell">5,959</td>
+      <td class="Pct3orAbove-cell">60%</td>
+      <td class="PctLevel1-cell">18%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Pinellas</td>
+      <td class="NumStudents-cell">7,390</td>
+      <td class="Pct3orAbove-cell">56%</td>
+      <td class="PctLevel1-cell">19%</td>
+      <td class="PctLevel2-cell">25%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">21%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Polk</td>
+      <td class="NumStudents-cell">8,437</td>
+      <td class="Pct3orAbove-cell">52%</td>
+      <td class="PctLevel1-cell">23%</td>
+      <td class="PctLevel2-cell">25%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">18%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Putnam</td>
+      <td class="NumStudents-cell">836</td>
+      <td class="Pct3orAbove-cell">41%</td>
+      <td class="PctLevel1-cell">31%</td>
+      <td class="PctLevel2-cell">28%</td>
+      <td class="PctLevel3-cell">22%</td>
+      <td class="PctLevel4-cell">15%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">St. Johns</td>
+      <td class="NumStudents-cell">3,051</td>
+      <td class="Pct3orAbove-cell">78%</td>
+      <td class="PctLevel1-cell">6%</td>
+      <td class="PctLevel2-cell">16%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">35%</td>
+      <td class="PctLevel5-cell">16%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">St. Lucie</td>
+      <td class="NumStudents-cell">3,210</td>
+      <td class="Pct3orAbove-cell">50%</td>
+      <td class="PctLevel1-cell">26%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">28%</td>
+      <td class="PctLevel4-cell">17%</td>
+      <td class="PctLevel5-cell">5%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Santa Rosa</td>
+      <td class="NumStudents-cell">1,994</td>
+      <td class="Pct3orAbove-cell">71%</td>
+      <td class="PctLevel1-cell">10%</td>
+      <td class="PctLevel2-cell">19%</td>
+      <td class="PctLevel3-cell">34%</td>
+      <td class="PctLevel4-cell">28%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Sarasota</td>
+      <td class="NumStudents-cell">3,215</td>
+      <td class="Pct3orAbove-cell">70%</td>
+      <td class="PctLevel1-cell">10%</td>
+      <td class="PctLevel2-cell">19%</td>
+      <td class="PctLevel3-cell">29%</td>
+      <td class="PctLevel4-cell">29%</td>
+      <td class="PctLevel5-cell">13%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Seminole</td>
+      <td class="NumStudents-cell">4,912</td>
+      <td class="Pct3orAbove-cell">67%</td>
+      <td class="PctLevel1-cell">13%</td>
+      <td class="PctLevel2-cell">20%</td>
+      <td class="PctLevel3-cell">29%</td>
+      <td class="PctLevel4-cell">28%</td>
+      <td class="PctLevel5-cell">10%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Sumter</td>
+      <td class="NumStudents-cell">642</td>
+      <td class="Pct3orAbove-cell">66%</td>
+      <td class="PctLevel1-cell">13%</td>
+      <td class="PctLevel2-cell">21%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">27%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Suwannee</td>
+      <td class="NumStudents-cell">464</td>
+      <td class="Pct3orAbove-cell">56%</td>
+      <td class="PctLevel1-cell">22%</td>
+      <td class="PctLevel2-cell">22%</td>
+      <td class="PctLevel3-cell">27%</td>
+      <td class="PctLevel4-cell">22%</td>
+      <td class="PctLevel5-cell">7%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Taylor</td>
+      <td class="NumStudents-cell">197</td>
+      <td class="Pct3orAbove-cell">59%</td>
+      <td class="PctLevel1-cell">16%</td>
+      <td class="PctLevel2-cell">24%</td>
+      <td class="PctLevel3-cell">34%</td>
+      <td class="PctLevel4-cell">17%</td>
+      <td class="PctLevel5-cell">8%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Union</td>
+      <td class="NumStudents-cell">162</td>
+      <td class="Pct3orAbove-cell">69%</td>
+      <td class="PctLevel1-cell">6%</td>
+      <td class="PctLevel2-cell">25%</td>
+      <td class="PctLevel3-cell">41%</td>
+      <td class="PctLevel4-cell">24%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Volusia</td>
+      <td class="NumStudents-cell">4,775</td>
+      <td class="Pct3orAbove-cell">58%</td>
+      <td class="PctLevel1-cell">19%</td>
+      <td class="PctLevel2-cell">23%</td>
+      <td class="PctLevel3-cell">29%</td>
+      <td class="PctLevel4-cell">23%</td>
+      <td class="PctLevel5-cell">6%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Wakulla</td>
+      <td class="NumStudents-cell">343</td>
+      <td class="Pct3orAbove-cell">67%</td>
+      <td class="PctLevel1-cell">12%</td>
+      <td class="PctLevel2-cell">21%</td>
+      <td class="PctLevel3-cell">31%</td>
+      <td class="PctLevel4-cell">27%</td>
+      <td class="PctLevel5-cell">9%</td>
+    </tr>
+    <tr>
+      <td class="DistrictName2019-cell">Walton</td>
+      <td class="NumStudents-cell">815</td>
+      <td class="Pct3orAbove-cell">66%</td>
+      <td class="PctLevel1-cell">13%</td>
+      <td class="PctLevel2-cell">21%</td>
+      <td class="PctLevel3-cell">30%</td>
+      <td class="PctLevel4-cell">27%</td>
+      <td class="PctLevel5-cell">8%</td>
+    </tr>
+    <tr class="lastRow">
+      <td class="DistrictName2019-cell">Washington</td>
+      <td class="NumStudents-cell">256</td>
+      <td class="Pct3orAbove-cell">60%</td>
+      <td class="PctLevel1-cell">12%</td>
+      <td class="PctLevel2-cell">28%</td>
+      <td class="PctLevel3-cell">35%</td>
+      <td class="PctLevel4-cell">22%</td>
+      <td class="PctLevel5-cell">4%</td>
+    </tr>
+  </tbody>
+</table>
+	
+</table>
+Five-Year Comparison of Students in Level 3 or Above:
+<table id="ela-district-comp" class="table table-striped table-bordered table-sm table-responsive ddtable">
+	<thead>
+		<tr>
+			<th>County</th>
+			<th>2015</th>
+			<th>2016</th>
+			<th>2017</th>
+			<th>2018</th>
+			<th>2019</th>
+		</tr>
+	</thead>
+  <tbody>
+    <tr class="firstRow">
+      <td class="DistrictNameComp-cell">State</td>
+      <td class="2015-cell">53%</td>
+      <td class="2016-cell">54%</td>
+      <td class="2017-cell">58%</td>
+      <td class="2018-cell">57%</td>
+      <td class="2019-cell">58%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Alachua</td>
+      <td class="2015-cell">54%</td>
+      <td class="2016-cell">54%</td>
+      <td class="2017-cell">56%</td>
+      <td class="2018-cell">56%</td>
+      <td class="2019-cell">57%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Baker</td>
+      <td class="2015-cell">60%</td>
+      <td class="2016-cell">59%</td>
+      <td class="2017-cell">64%</td>
+      <td class="2018-cell">72%</td>
+      <td class="2019-cell">73%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Bay</td>
+      <td class="2015-cell">52%</td>
+      <td class="2016-cell">53%</td>
+      <td class="2017-cell">59%</td>
+      <td class="2018-cell">57%</td>
+      <td class="2019-cell">61%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Bradford</td>
+      <td class="2015-cell">45%</td>
+      <td class="2016-cell">45%</td>
+      <td class="2017-cell">44%</td>
+      <td class="2018-cell">47%</td>
+      <td class="2019-cell">59%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Brevard</td>
+      <td class="2015-cell">60%</td>
+      <td class="2016-cell">60%</td>
+      <td class="2017-cell">65%</td>
+      <td class="2018-cell">63%</td>
+      <td class="2019-cell">64%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Broward</td>
+      <td class="2015-cell">52%</td>
+      <td class="2016-cell">55%</td>
+      <td class="2017-cell">57%</td>
+      <td class="2018-cell">59%</td>
+      <td class="2019-cell">60%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Calhoun</td>
+      <td class="2015-cell">52%</td>
+      <td class="2016-cell">58%</td>
+      <td class="2017-cell">66%</td>
+      <td class="2018-cell">62%</td>
+      <td class="2019-cell">62%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Charlotte</td>
+      <td class="2015-cell">50%</td>
+      <td class="2016-cell">57%</td>
+      <td class="2017-cell">66%</td>
+      <td class="2018-cell">63%</td>
+      <td class="2019-cell">69%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Citrus</td>
+      <td class="2015-cell">63%</td>
+      <td class="2016-cell">60%</td>
+      <td class="2017-cell">64%</td>
+      <td class="2018-cell">63%</td>
+      <td class="2019-cell">61%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Clay</td>
+      <td class="2015-cell">62%</td>
+      <td class="2016-cell">63%</td>
+      <td class="2017-cell">70%</td>
+      <td class="2018-cell">68%</td>
+      <td class="2019-cell">68%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Collier</td>
+      <td class="2015-cell">53%</td>
+      <td class="2016-cell">51%</td>
+      <td class="2017-cell">57%</td>
+      <td class="2018-cell">59%</td>
+      <td class="2019-cell">61%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Columbia</td>
+      <td class="2015-cell">53%</td>
+      <td class="2016-cell">55%</td>
+      <td class="2017-cell">63%</td>
+      <td class="2018-cell">57%</td>
+      <td class="2019-cell">68%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Miami-Dade</td>
+      <td class="2015-cell">53%</td>
+      <td class="2016-cell">54%</td>
+      <td class="2017-cell">58%</td>
+      <td class="2018-cell">61%</td>
+      <td class="2019-cell">60%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Desoto</td>
+      <td class="2015-cell">35%</td>
+      <td class="2016-cell">35%</td>
+      <td class="2017-cell">31%</td>
+      <td class="2018-cell">29%</td>
+      <td class="2019-cell">34%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Dixie</td>
+      <td class="2015-cell">54%</td>
+      <td class="2016-cell">60%</td>
+      <td class="2017-cell">66%</td>
+      <td class="2018-cell">65%</td>
+      <td class="2019-cell">62%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Duval</td>
+      <td class="2015-cell">46%</td>
+      <td class="2016-cell">50%</td>
+      <td class="2017-cell">51%</td>
+      <td class="2018-cell">50%</td>
+      <td class="2019-cell">51%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Escambia</td>
+      <td class="2015-cell">48%</td>
+      <td class="2016-cell">51%</td>
+      <td class="2017-cell">59%</td>
+      <td class="2018-cell">52%</td>
+      <td class="2019-cell">56%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Flagler</td>
+      <td class="2015-cell">60%</td>
+      <td class="2016-cell">63%</td>
+      <td class="2017-cell">69%</td>
+      <td class="2018-cell">62%</td>
+      <td class="2019-cell">68%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Franklin</td>
+      <td class="2015-cell">41%</td>
+      <td class="2016-cell">41%</td>
+      <td class="2017-cell">52%</td>
+      <td class="2018-cell">44%</td>
+      <td class="2019-cell">50%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Gadsden</td>
+      <td class="2015-cell">39%</td>
+      <td class="2016-cell">46%</td>
+      <td class="2017-cell">34%</td>
+      <td class="2018-cell">40%</td>
+      <td class="2019-cell">37%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Gilchrist</td>
+      <td class="2015-cell">52%</td>
+      <td class="2016-cell">60%</td>
+      <td class="2017-cell">72%</td>
+      <td class="2018-cell">58%</td>
+      <td class="2019-cell">70%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Glades</td>
+      <td class="2015-cell">52%</td>
+      <td class="2016-cell">48%</td>
+      <td class="2017-cell">58%</td>
+      <td class="2018-cell">55%</td>
+      <td class="2019-cell">62%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Gulf</td>
+      <td class="2015-cell">50%</td>
+      <td class="2016-cell">56%</td>
+      <td class="2017-cell">52%</td>
+      <td class="2018-cell">46%</td>
+      <td class="2019-cell">53%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Hamilton</td>
+      <td class="2015-cell">33%</td>
+      <td class="2016-cell">32%</td>
+      <td class="2017-cell">33%</td>
+      <td class="2018-cell">36%</td>
+      <td class="2019-cell">50%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Hardee</td>
+      <td class="2015-cell">54%</td>
+      <td class="2016-cell">54%</td>
+      <td class="2017-cell">55%</td>
+      <td class="2018-cell">57%</td>
+      <td class="2019-cell">59%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Hendry</td>
+      <td class="2015-cell">47%</td>
+      <td class="2016-cell">40%</td>
+      <td class="2017-cell">45%</td>
+      <td class="2018-cell">44%</td>
+      <td class="2019-cell">47%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Hernando</td>
+      <td class="2015-cell">59%</td>
+      <td class="2016-cell">58%</td>
+      <td class="2017-cell">61%</td>
+      <td class="2018-cell">62%</td>
+      <td class="2019-cell">57%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Highlands</td>
+      <td class="2015-cell">48%</td>
+      <td class="2016-cell">44%</td>
+      <td class="2017-cell">48%</td>
+      <td class="2018-cell">48%</td>
+      <td class="2019-cell">50%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Hillsborough</td>
+      <td class="2015-cell">50%</td>
+      <td class="2016-cell">52%</td>
+      <td class="2017-cell">56%</td>
+      <td class="2018-cell">53%</td>
+      <td class="2019-cell">52%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Holmes</td>
+      <td class="2015-cell">44%</td>
+      <td class="2016-cell">55%</td>
+      <td class="2017-cell">56%</td>
+      <td class="2018-cell">57%</td>
+      <td class="2019-cell">59%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Indian River</td>
+      <td class="2015-cell">53%</td>
+      <td class="2016-cell">53%</td>
+      <td class="2017-cell">56%</td>
+      <td class="2018-cell">56%</td>
+      <td class="2019-cell">60%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Jackson</td>
+      <td class="2015-cell">60%</td>
+      <td class="2016-cell">59%</td>
+      <td class="2017-cell">67%</td>
+      <td class="2018-cell">66%</td>
+      <td class="2019-cell">58%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Jefferson</td>
+      <td class="2015-cell">37%</td>
+      <td class="2016-cell">30%</td>
+      <td class="2017-cell">41%</td>
+      <td class="2018-cell">36%</td>
+      <td class="2019-cell">45%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Lafayette</td>
+      <td class="2015-cell">45%</td>
+      <td class="2016-cell">61%</td>
+      <td class="2017-cell">60%</td>
+      <td class="2018-cell">64%</td>
+      <td class="2019-cell">62%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Lake</td>
+      <td class="2015-cell">52%</td>
+      <td class="2016-cell">57%</td>
+      <td class="2017-cell">63%</td>
+      <td class="2018-cell">61%</td>
+      <td class="2019-cell">60%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Lee</td>
+      <td class="2015-cell">53%</td>
+      <td class="2016-cell">54%</td>
+      <td class="2017-cell">57%</td>
+      <td class="2018-cell">55%</td>
+      <td class="2019-cell">58%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Leon</td>
+      <td class="2015-cell">63%</td>
+      <td class="2016-cell">61%</td>
+      <td class="2017-cell">62%</td>
+      <td class="2018-cell">61%</td>
+      <td class="2019-cell">61%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Levy</td>
+      <td class="2015-cell">46%</td>
+      <td class="2016-cell">49%</td>
+      <td class="2017-cell">53%</td>
+      <td class="2018-cell">48%</td>
+      <td class="2019-cell">52%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Liberty</td>
+      <td class="2015-cell">58%</td>
+      <td class="2016-cell">61%</td>
+      <td class="2017-cell">55%</td>
+      <td class="2018-cell">68%</td>
+      <td class="2019-cell">66%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Madison</td>
+      <td class="2015-cell">35%</td>
+      <td class="2016-cell">47%</td>
+      <td class="2017-cell">55%</td>
+      <td class="2018-cell">55%</td>
+      <td class="2019-cell">40%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Manatee</td>
+      <td class="2015-cell">46%</td>
+      <td class="2016-cell">47%</td>
+      <td class="2017-cell">50%</td>
+      <td class="2018-cell">49%</td>
+      <td class="2019-cell">51%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Marion</td>
+      <td class="2015-cell">45%</td>
+      <td class="2016-cell">45%</td>
+      <td class="2017-cell">50%</td>
+      <td class="2018-cell">46%</td>
+      <td class="2019-cell">44%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Martin</td>
+      <td class="2015-cell">54%</td>
+      <td class="2016-cell">53%</td>
+      <td class="2017-cell">60%</td>
+      <td class="2018-cell">57%</td>
+      <td class="2019-cell">54%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Monroe</td>
+      <td class="2015-cell">63%</td>
+      <td class="2016-cell">60%</td>
+      <td class="2017-cell">68%</td>
+      <td class="2018-cell">62%</td>
+      <td class="2019-cell">70%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Nassau</td>
+      <td class="2015-cell">66%</td>
+      <td class="2016-cell">69%</td>
+      <td class="2017-cell">78%</td>
+      <td class="2018-cell">76%</td>
+      <td class="2019-cell">75%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Okaloosa</td>
+      <td class="2015-cell">61%</td>
+      <td class="2016-cell">66%</td>
+      <td class="2017-cell">66%</td>
+      <td class="2018-cell">66%</td>
+      <td class="2019-cell">66%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Okeechobee</td>
+      <td class="2015-cell">43%</td>
+      <td class="2016-cell">43%</td>
+      <td class="2017-cell">50%</td>
+      <td class="2018-cell">53%</td>
+      <td class="2019-cell">59%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Orange</td>
+      <td class="2015-cell">55%</td>
+      <td class="2016-cell">54%</td>
+      <td class="2017-cell">57%</td>
+      <td class="2018-cell">55%</td>
+      <td class="2019-cell">55%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Osceola</td>
+      <td class="2015-cell">51%</td>
+      <td class="2016-cell">50%</td>
+      <td class="2017-cell">53%</td>
+      <td class="2018-cell">51%</td>
+      <td class="2019-cell">51%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Palm Beach</td>
+      <td class="2015-cell">51%</td>
+      <td class="2016-cell">52%</td>
+      <td class="2017-cell">54%</td>
+      <td class="2018-cell">56%</td>
+      <td class="2019-cell">54%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Pasco</td>
+      <td class="2015-cell">53%</td>
+      <td class="2016-cell">57%</td>
+      <td class="2017-cell">60%</td>
+      <td class="2018-cell">57%</td>
+      <td class="2019-cell">60%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Pinellas</td>
+      <td class="2015-cell">52%</td>
+      <td class="2016-cell">53%</td>
+      <td class="2017-cell">56%</td>
+      <td class="2018-cell">53%</td>
+      <td class="2019-cell">56%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Polk</td>
+      <td class="2015-cell">48%</td>
+      <td class="2016-cell">51%</td>
+      <td class="2017-cell">53%</td>
+      <td class="2018-cell">51%</td>
+      <td class="2019-cell">52%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Putnam</td>
+      <td class="2015-cell">39%</td>
+      <td class="2016-cell">40%</td>
+      <td class="2017-cell">42%</td>
+      <td class="2018-cell">40%</td>
+      <td class="2019-cell">41%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">St. Johns</td>
+      <td class="2015-cell">73%</td>
+      <td class="2016-cell">77%</td>
+      <td class="2017-cell">80%</td>
+      <td class="2018-cell">78%</td>
+      <td class="2019-cell">78%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">St. Lucie</td>
+      <td class="2015-cell">44%</td>
+      <td class="2016-cell">46%</td>
+      <td class="2017-cell">49%</td>
+      <td class="2018-cell">46%</td>
+      <td class="2019-cell">50%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Santa Rosa</td>
+      <td class="2015-cell">67%</td>
+      <td class="2016-cell">70%</td>
+      <td class="2017-cell">74%</td>
+      <td class="2018-cell">66%</td>
+      <td class="2019-cell">71%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Sarasota</td>
+      <td class="2015-cell">68%</td>
+      <td class="2016-cell">68%</td>
+      <td class="2017-cell">71%</td>
+      <td class="2018-cell">68%</td>
+      <td class="2019-cell">70%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Seminole</td>
+      <td class="2015-cell">62%</td>
+      <td class="2016-cell">64%</td>
+      <td class="2017-cell">68%</td>
+      <td class="2018-cell">65%</td>
+      <td class="2019-cell">67%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Sumter</td>
+      <td class="2015-cell">64%</td>
+      <td class="2016-cell">65%</td>
+      <td class="2017-cell">70%</td>
+      <td class="2018-cell">67%</td>
+      <td class="2019-cell">66%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Suwannee</td>
+      <td class="2015-cell">47%</td>
+      <td class="2016-cell">47%</td>
+      <td class="2017-cell">54%</td>
+      <td class="2018-cell">55%</td>
+      <td class="2019-cell">56%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Taylor</td>
+      <td class="2015-cell">49%</td>
+      <td class="2016-cell">44%</td>
+      <td class="2017-cell">56%</td>
+      <td class="2018-cell">55%</td>
+      <td class="2019-cell">59%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Union</td>
+      <td class="2015-cell">63%</td>
+      <td class="2016-cell">63%</td>
+      <td class="2017-cell">68%</td>
+      <td class="2018-cell">70%</td>
+      <td class="2019-cell">69%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Volusia</td>
+      <td class="2015-cell">53%</td>
+      <td class="2016-cell">56%</td>
+      <td class="2017-cell">59%</td>
+      <td class="2018-cell">56%</td>
+      <td class="2019-cell">58%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Wakulla</td>
+      <td class="2015-cell">59%</td>
+      <td class="2016-cell">54%</td>
+      <td class="2017-cell">65%</td>
+      <td class="2018-cell">66%</td>
+      <td class="2019-cell">67%</td>
+    </tr>
+    <tr>
+      <td class="DistrictNameComp-cell">Walton</td>
+      <td class="2015-cell">62%</td>
+      <td class="2016-cell">65%</td>
+      <td class="2017-cell">68%</td>
+      <td class="2018-cell">66%</td>
+      <td class="2019-cell">66%</td>
+    </tr>
+    <tr class="lastRow">
+      <td class="DistrictNameComp-cell">Washington</td>
+      <td class="2015-cell">57%</td>
+      <td class="2016-cell">62%</td>
+      <td class="2017-cell">64%</td>
+      <td class="2018-cell">66%</td>
+      <td class="2019-cell">60%</td>
+    </tr>
+  </tbody>
+</table>
+  
+</table>
+
+<!-- JS libraries -->
+	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+  crossorigin=""></script>
+ 	<script type="text/javascript" src="js/tile.stamen.js?v1.3.0"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.18/fh-3.1.4/r-2.2.2/datatables.min.js"></script>
+	
+<!-- map data -->
+	<script src="json/fl-counties.geojson"></script>
+	
+<!-- js code -->
+	<script type="text/javascript" src="js/third-grade-districts.js"></script>
+
+</body>
+</html>
