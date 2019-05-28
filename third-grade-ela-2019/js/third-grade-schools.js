@@ -7,7 +7,6 @@ $(document).ready( function () {
 		columns: [
 			{title: "District"},
 			{title: "School"},
-			{title: "Number of Students"},
 			{title: "Percent in Level 3 or Above"},
 			{title: "Percent in Level 1"},
 			{title: "Percent in Level 2"},
