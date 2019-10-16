@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>School Threat Assessments - Duval</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.20/r-2.2.3/rg-1.1.1/sc-2.0.1/datatables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/school-threats.css" />
+
+</head>
+<body>
+Select a school year:
+<ul>
+	<li><label><input type="radio" name="SchoolYear" value="201819" checked="checked">2018-2019</label></li>
+	<li><label><input type="radio" name="SchoolYear" value="201920">2019-2020</label></li>
+</ul>
+Click on the plus sign under a school name to see the dates of the threat assessments that year.
+Search for a school in the box below:
+<table id="duval-threats" class="table table-striped table-bordered table-md table-responsive" width="100%">
+</table>
+
+	<!-- JS library -->
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.20/r-2.2.3/rg-1.1.1/sc-2.0.1/datatables.min.js"></script>
+	
+	<!-- JS code -->
+	<script type="text/javascript" src="js/duval-threats.js"></script>
+	
+</body>
+</html>

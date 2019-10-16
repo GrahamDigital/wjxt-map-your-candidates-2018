@@ -1,0 +1,23 @@
+ ul {
+	 list-style-type: none;
+	 padding: 0px;
+ }
+ 
+ li {
+	 display: inline;
+	 padding: 0px;
+ }
+  
+ .dataTables_filter {
+   float: left !important;
+   padding: 5px;
+}
+
+.explainer {
+	padding: 5px 0px 0px 5px;
+}
+
+ .dataTables_paginate{
+   float: left !important;
+   padding: 5px;
+}
