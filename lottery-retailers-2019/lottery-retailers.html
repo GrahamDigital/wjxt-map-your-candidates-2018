@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Florida Lottery Retailers</title>
+	<!-- Mobile meta tags, taken from Chris Essig tutorial @csessig86 -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="MobileOptimized" content="320"/>
+	<meta http-equiv="cleartype" content="on">
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+	<link rel="stylesheet" href="css/lottery-retailers.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+</head>
+<body>
+<h3>This map shows the collective value of winning tickets sold by lottery retailer, as well as how many draw game tickets and scratch-off tickets were sold there, during 2017 and 2018.</h3>
+<p>Use the menu on the right side of the map to switch between prize totals, draw game sales, and scratch-off sales.<br />
+Circles with numbers mean there is a cluster of retailers in one area - click on the dot to zoom in.<br />
+Green pins indicate smaller prize totals or ticket sales, red pins indicate higher prize totals or ticket sales, and orange pins indicate in-between amounts. Click on a pin to see a retailer's exact totals.<br />
+</p>
+	
+	<div id="map"></div>
+	
+	<!-- JS libraries -->
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+	<script type="text/javascript" src="js/tile.stamen.js?v1.3.0"></script>
+	
+	<!-- data sources -->
+	<script src="json/nefl_retailers_draw.json"></script>
+	<script src="json/nefl_retailers_scratch.json"></script>
+	<script src="json/nefl_winners.json"></script>
+	
+	<!-- JS to create map -->
+	<script src="js/lottery-retailers-script.js"></script>	
+</body>
+</html>
