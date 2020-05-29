@@ -35,7 +35,7 @@ $(document).ready( function () {
 		language: {
 			"search": ""
 		},
-		pageLength: 7,
+		pageLength: 5,
 		dom: 'ftipr',
 	});
 });
